@@ -16,6 +16,9 @@ define('APP', 'app');
 define('OPT', 'opt');
 define('NLI', 'nli');
 
+define('DS', DIRECTORY_SEPARATOR);
+define('WS', '/');
+
 
 class autoLoad{
     
