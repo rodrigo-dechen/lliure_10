@@ -13,8 +13,8 @@ define('refresh', 2);
 
 define('API', 'api');
 define('APP', 'app');
-define('SYS', 'sys');
-define('OFF', 'off');
+define('OPT', 'opt');
+define('NLI', 'nli');
 
 
 class autoLoad{
@@ -82,7 +82,7 @@ class lliure {
     private static 
     
     /**
-     * sabe em qual lugar o lliure vai trabalhar. se é em app, sys, api ou off.
+     * sabe em qual lugar o lliure vai trabalhar. se é em app, opt, api ou nli.
      */
     $Modo,
     
@@ -162,7 +162,7 @@ class lliure {
         self::requires();
         self::setllconf();
         self::dadosApp();
-        self::historicoInicia();
+        historico::iniciar();
         self::setVarDocsHeader();
         ProcessaApp();
     }
@@ -202,12 +202,12 @@ class lliure {
         
         if(file_exists(APP.DS.$_GET[0]))
             self::$Modo = APP;
-        elseif (file_exists(SYS.DS.$_GET[0]))
-            self::$Modo = SYS;
+        elseif (file_exists(OPT.DS.$_GET[0]))
+            self::$Modo = OPT;
         elseif (file_exists(API.DS.$_GET[0]))
             self::$Modo = API;
-        elseif (file_exists(OFF.DS.$_GET[0]))
-            self::$Modo = OFF;
+        elseif (file_exists(NLI.DS.$_GET[0]))
+            self::$Modo = NLI;
         else
             header ('Location: ' . URLREAL);
         

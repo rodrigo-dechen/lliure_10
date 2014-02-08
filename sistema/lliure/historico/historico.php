@@ -7,7 +7,7 @@
 
 class historico {
     
-    private static function iniciar(){
+    public static function iniciar(){
 
         if($_GET[0] != 'index'){
             $pageatual = lliure::url($_GET);
