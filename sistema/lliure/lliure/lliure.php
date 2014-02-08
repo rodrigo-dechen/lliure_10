@@ -16,6 +16,67 @@ define('APP', 'app');
 define('SYS', 'sys');
 define('OFF', 'off');
 
+
+class autoLoad{
+    
+    static private
+
+    /**
+     * array com os caminhos que o auto load procura
+     */
+    $path = array(),
+
+    /**
+     * array com os functions que o auto load executa
+     */
+    $functions = array();
+    
+    public static function setPath($path){
+
+        $basePath = realpath(__DIR__.DS.'..'.DS.'..'.DS.$path);
+        $corte = strlen(realpath(__DIR__.DS.'..'.DS.'..')) - strlen($basePath) + 1;
+        $path = $corte < 0? substr($basePath, $corte): NULL;
+        
+        if ($path !== NULL && !in_array($path, self::$path))
+            self::$path[] = $path;
+    }
+    
+    public static function setFunction($function){
+        if (is_callable($function))
+            self::$functions[] = $function;
+    }
+
+    public static function getFile($nome){
+        
+        $retorno = null;
+        
+        foreach (self::$functions as $function){
+            $arquivo = realpath(__DIR__.DS.'..'.DS.'..'.DS.$function($nome, self::$path));
+            if (is_file($arquivo)){
+                $retorno = $arquivo;
+                break;
+            }
+        }
+        
+        if ($retorno !== NULL)
+            return $retorno;
+        else
+            throw new Exception('Erro do AutoLoad', 0);
+    }
+
+}
+
+spl_autoload_register(function ($nome){
+    try {
+        require_once autoLoad::getFile($nome);
+    } catch (Exception $exc) {
+        return NULL;
+        //echo $exc->getMessage();
+    }
+});
+
+
+
 class lliure {
     
     private static 
@@ -165,7 +226,6 @@ class lliure {
     }
 
     private static function autoLoader() {
-        require_once 'lliure'.DS.'lliure'.DS.'autoLoader.php';
         autoLoad::setPath('api');
         autoLoad::setPath('lliure');
         autoLoad::setPath('tabelas');
@@ -198,32 +258,6 @@ class lliure {
             foreach ($dados as $key => $value)
                 self::${$key} = $value;
         
-    }
-
-    private static function historicoInicia(){
-
-        if($_GET[0] != 'index'){
-            $pageatual = self::url($_GET);
-
-            if(isset($_SESSION['ll']['historico']) && !empty($_SESSION['ll']['historico'])){
-                $count = count($_SESSION['ll']['historico']);
-                if($count > 1 && $pageatual === $_SESSION['ll']['historico'][$count-2]){
-                    array_pop($_SESSION['ll']['historico']);
-                }elseif($pageatual !== $_SESSION['ll']['historico'][$count-1]){
-                    $_SESSION['ll']['historico'][] = $pageatual;
-                }
-            } else {
-                $_SESSION['ll']['historico'][0] = $pageatual;
-            }
-
-        } else {
-            if(isset($_SESSION['ll']['historico'])){
-                unset($_SESSION['ll']['historico']);
-            }
-        }
-
-        return true;
-
     }
     
     private static function setVarDocsHeader(){
@@ -531,5 +565,3 @@ function ProcessaApp(){
     }
 
 }
-
-?>
