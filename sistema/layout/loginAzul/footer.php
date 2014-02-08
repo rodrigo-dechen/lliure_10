@@ -1,0 +1,1 @@
+<?php lliure::footer(); ?>

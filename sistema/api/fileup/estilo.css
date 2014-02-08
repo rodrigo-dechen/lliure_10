@@ -1,0 +1,126 @@
+/**
+*
+* API Fileup - Plugin CMS
+*
+* @Versão 5.0
+* @Desenvolvedor Jeison Frasson <jomadee@lliure.com.br>
+* @Entre em contato com o desenvolvedor <jomadee@lliure.com.br> http://www.lliure.com.br/
+* @Licença http://opensource.org/licenses/gpl-license.php GNU Public License
+*
+*/
+
+.fileUpBloco{
+    float: left;
+    width: 100%;
+    font-size: 10px;
+}
+
+.fileUpItem{
+    float: left;
+    width: 100%;
+    height: 29px;
+    position: relative;
+}
+
+.fileUpItem .fileup_file{
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    float: left;
+}
+
+.fileUpItem span.fileup_nome{
+    float: left;
+    position: absolute;
+
+    -moz-box-sizing: border-box; /* Firefox */
+    box-sizing:border-box;
+    white-space: nowrap;
+    height: 29px;
+    font-size: 1.4em;
+    border-radius: 4px;
+    margin: 0px;
+    background-color: #fff;
+    border: 1px solid #000;
+    line-height: 1em;
+}
+
+.fileUpItem .fileup_botao{
+    float: left;
+    position: absolute;
+
+    background: #444;
+    width: 143px;
+    float: left;
+    color: #ddd;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.fileUpItem .fileup_botao:hover{
+    color: #ddd;
+    background: #606060;
+}
+
+/**
+*layou com INSIDE_LEFT
+*/
+.fileUpItem.INSIDE_LEFT span.fileup_nome{
+    left: 0;
+    right: 0;
+    padding: 7px 5px 6px 148px;
+}
+.fileUpItem.INSIDE_LEFT .fileup_botao{
+    left: 2px;
+    top: 2px;
+    height: 25px;
+    line-height: 25px;
+}
+
+/**
+*layou com INSIDE_RIGHT
+*/
+.fileUpItem.INSIDE_RIGHT span.fileup_nome{
+    left: 0;
+    right: 0;
+    padding: 7px 148px 6px 5px;
+}
+.fileUpItem.INSIDE_RIGHT .fileup_botao{
+    right: 2px;
+    top: 2px;
+    height: 25px;
+    line-height: 25px;
+}
+
+/**
+*layou com OUTSIDE_LEFT
+*/
+.fileUpItem.OUTSIDE_LEFT span.fileup_nome{
+    left: 148px;
+    right: 0;
+    padding: 7px 5px 6px 5px;
+}
+.fileUpItem.OUTSIDE_LEFT .fileup_botao{
+    left: 0px;
+    top: 0px;
+    height: 29px;
+    line-height: 29px;
+}
+
+/**
+*layou com OUTSIDE_RIGHT
+*/
+.fileUpItem.OUTSIDE_RIGHT span.fileup_nome{
+    left: 0;
+    right: 148px;
+    padding: 7px 5px 6px 5px;
+}
+.fileUpItem.OUTSIDE_RIGHT .fileup_botao{
+    right: 0px;
+    top: 0px;
+    height: 29px;
+    line-height: 29px;
+}

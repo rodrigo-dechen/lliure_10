@@ -1,0 +1,4 @@
+$(function(){
+    $('.user').focus();
+    gsqul();
+});
