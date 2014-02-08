@@ -78,6 +78,7 @@ class admin extends db{
                 LIMIT
                     1
             ';
+            echo $sql;
             $dados = $this->select($sql)[0];
         }
         

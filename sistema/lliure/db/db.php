@@ -268,7 +268,7 @@ class db {
             while (($return[] = mysql_fetch_assoc($result)) or array_pop($return));
             return $return;
         }elseif(self::$type == self::PDO){
-            return self::$DB->query($this->getQueryList())->execute()->fetchAll(PDO::FETCH_ASSOC);
+            return self::$DB->query($this->getQueryList())->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 
