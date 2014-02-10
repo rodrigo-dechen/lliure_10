@@ -191,19 +191,21 @@ class lliure {
             }
         }
         
+        $_GET[0] = (isset($_GET[0]) && !empty($_GET[0])? $_GET[0]: 'index');
+        
     }
 
     private static function bdconf(){
-        if (!file_exists('etc/bdconf.php') && (!isset($_GET[0]) || $_GET[0] !== 'instalar')){
-            header ('Location: ' . URLREAL . 'instalar');
-        }else{
-            require_once 'etc/bdconf.php';
+        if($_GET[0] !== 'instalar'){
+            if (!file_exists('etc/bdconf.php')){
+                header ('Location: ' . URLREAL . 'instalar');
+            }else{
+                require_once 'etc/bdconf.php';
+            }
         }
     }
 
     private static function validaApp() {
-        
-        $_GET[0] = (isset($_GET[0]) && !empty($_GET[0])? $_GET[0]: 'index');
         
         if(file_exists(APP.DS.$_GET[0]))
             self::$Modo = APP;
@@ -223,7 +225,7 @@ class lliure {
     }
 
     public static function logado() {
-        if (!isset($_SESSION['ll']['user']) && (!isset($_GET[0]) || $_GET[0] !== 'login')){
+        if (!isset($_SESSION['ll']['user']) && ($_GET[0] !== 'login') && self::$Modo != NLI){
             //$_SESSION['ll']['url'] = 
             header ('Location: ' . URLREAL . 'login');
         }
