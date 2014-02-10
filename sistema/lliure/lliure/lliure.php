@@ -194,9 +194,11 @@ class lliure {
     }
 
     private static function bdconf(){
-        if (!file_exists('etc/bdconf.php') && (!isset($_GET[0]) || $_GET[0] !== 'instalar'))
+        if (!file_exists('etc/bdconf.php') && (!isset($_GET[0]) || $_GET[0] !== 'instalar')){
             header ('Location: ' . URLREAL . 'instalar');
-        require_once 'etc/bdconf.php';
+        }else{
+            require_once 'etc/bdconf.php';
+        }
     }
 
     private static function validaApp() {
