@@ -29,15 +29,11 @@ lliure::header();
 		<span class="borda-direita"></span>
 		<div class="left">
             <a href="" class="logoSistema"><img src="<?php echo lliure::getPathLayout();?>/imagens/blank.gif"/></a>
-			<?php
-			if(!empty($_GET) && ll_tsecuryt()){
-				if(lliure::getModo() == APP){?>
-                    <a id="addDesktop" href="apiDesktop/page=<?php echo str_replace('/', ':', lliure::url($_GET));?>" class="addDesktop" title="Adicionar essa página ao desktop">
-                        <img src="<?php echo lliure::getPathLayout();?>/imagens/add_desktop.png" alt="" />
-                    </a>
-					<?php 
-				}
-			}?>
+			<?php if(!empty($_GET) && ll_tsecuryt() && lliure::getModo() == APP){?>
+                <a id="addDesktop" href="linkdesktop/page=<?php echo str_replace('/', ':', lliure::url($_GET));?>" class="addDesktop" title="Adicionar essa página ao desktop">
+                    <img src="<?php echo lliure::getPathLayout();?>/imagens/add_desktop.png" alt="" />
+                </a>
+			<?php }?>
 		</div>
 		
 

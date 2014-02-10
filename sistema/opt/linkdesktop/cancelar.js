@@ -1,0 +1,3 @@
+$('#canselarDesktop').click(function(){
+    fechaJfbox();
+});
