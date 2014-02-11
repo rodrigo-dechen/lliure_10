@@ -39,8 +39,8 @@
 	}
 
 	#instal h1{
-		font-size: 1em;
-		margin: 10px 0 0 20px;
+		font-size: 2.5em;
+		margin: 0 0 20px 0;
 		}
 	
 	#instal form {
@@ -100,7 +100,7 @@
 			
 	#instal form .botao{
 		clear: both;
-		margin: 0px 20px;
+		margin: 0px;
 		float: right;
 		}
 		
