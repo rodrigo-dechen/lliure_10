@@ -36,8 +36,8 @@ class autoLoad{
     
     public static function setPath($path){
 
-        $basePath = realpath(__DIR__.DS.'..'.DS.'..'.DS.$path);
-        $corte = strlen(realpath(__DIR__.DS.'..'.DS.'..')) - strlen($basePath) + 1;
+        $basePath = realpath(__DIR__.WS.'..'.WS.'..'.WS.$path);
+        $corte = strlen(realpath(__DIR__.WS.'..'.WS.'..')) - strlen($basePath) + 1;
         $path = $corte < 0? substr($basePath, $corte): NULL;
         
         if ($path !== NULL && !in_array($path, self::$path))
@@ -54,7 +54,7 @@ class autoLoad{
         $retorno = null;
         
         foreach (self::$functions as $function){
-            $arquivo = realpath(__DIR__.DS.'..'.DS.'..'.DS.$function($nome, self::$path));
+            $arquivo = realpath(__DIR__.WS.'..'.WS.'..'.WS.$function($nome, self::$path));
             if (is_file($arquivo)){
                 $retorno = $arquivo;
                 break;
@@ -207,20 +207,20 @@ class lliure {
 
     private static function validaApp() {
         
-        if(file_exists(APP.DS.$_GET[0]))
+        if(file_exists(APP.WS.$_GET[0]))
             self::$Modo = APP;
-        elseif (file_exists(OPT.DS.$_GET[0]))
+        elseif (file_exists(OPT.WS.$_GET[0]))
             self::$Modo = OPT;
-        elseif (file_exists(API.DS.$_GET[0]))
+        elseif (file_exists(API.WS.$_GET[0]))
             self::$Modo = API;
-        elseif (file_exists(NLI.DS.$_GET[0]))
+        elseif (file_exists(NLI.WS.$_GET[0]))
             self::$Modo = NLI;
         else
             header ('Location: ' . URLREAL);
         
-        self::$pathApp = self::$Modo.DS.$_GET[0];
-        self::$fileHeader = self::$pathApp.DS.'header.php';
-        self::$fileBody = self::$pathApp.DS.'body.php';
+        self::$pathApp = self::$Modo.WS.$_GET[0];
+        self::$fileHeader = self::$pathApp.WS.'header.php';
+        self::$fileBody = self::$pathApp.WS.'body.php';
         
     }
 
@@ -239,8 +239,8 @@ class lliure {
         autoLoad::setFunction(function($class, $paths){
             $retorno = NULL;
             foreach ($paths as $value) {
-                if (file_exists($value.DS.$class.DS.$class.'.php')){
-                    $retorno = $value.DS.$class.DS.$class.'.php';
+                if (file_exists($value.WS.$class.WS.$class.'.php')){
+                    $retorno = $value.WS.$class.WS.$class.'.php';
                     break;
                 }
             }
@@ -249,19 +249,19 @@ class lliure {
     }
 
     private static function requires() {
-        require_once 'suplimentos'.DS.'php'.DS.'functions.php';
+        require_once 'suplimentos'.WS.'php'.WS.'functions.php';
     }
     
     private static function setllconf() {
         
-        if((self::$llconf = @simplexml_load_file('etc'.DS.'llconf.ll')) == false)
+        if((self::$llconf = @simplexml_load_file('etc'.WS.'llconf.ll')) == false)
             self::$llconf = false;
 
     }
     
     private static function dadosApp() {
         
-        if (($dados = @simplexml_load_file(self::$Modo.DS.$_GET[0].DS.'sys'.DS.'dados.ll')) !== FALSE)
+        if (($dados = @simplexml_load_file(self::$Modo.WS.$_GET[0].WS.'sys'.WS.'dados.ll')) !== FALSE)
             foreach ($dados as $key => $value)
                 self::${$key} = $value;
         
@@ -283,7 +283,7 @@ class lliure {
      * configura o layout q o lliure ira usar.
      */
     public static function setLayout($layout){
-        if (file_exists('layout' . DS . $layout))
+        if (file_exists('layout' . WS . $layout))
             self::$layout = $layout;
     }
 
@@ -567,16 +567,16 @@ function ProcessaApp(){
 
     if(lliure::getHtmlSattus()){
 
-        if(lliure::getLayoutStatus() && file_exists(lliure::getPathLayout() . DS . 'header.php'))
-            require_once lliure::getPathLayout() . DS . 'header.php';
+        if(lliure::getLayoutStatus() && file_exists(lliure::getPathLayout() . WS . 'header.php'))
+            require_once lliure::getPathLayout() . WS . 'header.php';
         else
             lliure::headerLayoutOff();
 
         if (file_exists(lliure::appBody()))
             require_once lliure::appBody();
 
-        if(lliure::getLayoutStatus() && file_exists(lliure::getPathLayout() . DS . 'footer.php'))
-            require_once lliure::getPathLayout(). DS . 'footer.php';
+        if(lliure::getLayoutStatus() && file_exists(lliure::getPathLayout() . WS . 'footer.php'))
+            require_once lliure::getPathLayout(). WS . 'footer.php';
         else
             lliure::footerLayoutOff();
 
