@@ -42,6 +42,7 @@
 	#instal h1{
 		font-size: 2.5em;
 		margin: 0 0 20px 0;
+        color: #0D6FD8;
 		}
 	
 	#instal form {
@@ -69,6 +70,16 @@
 		font-weight: bold;
 		margin: 0 0 0.5em;
 		}
+	
+	#instal form label.error{
+        float: right;
+        width: 100%;
+        font-size: 0.8em;
+		text-align: left;
+		color: #0D6FD8;
+		font-weight: bold;
+		margin: 0.5em 0 0.5em;
+		}
 		
 		#instal form input{
 			float: right;
@@ -84,6 +95,10 @@
 			font-size: 1.2em;			
 			margin: 0;
 			padding: 0 8px;
+			}
+
+		#instal form input.error{
+			border-color: #0D6FD8;
 			}
 
 		#instal form input:hover,

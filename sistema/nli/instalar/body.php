@@ -10,11 +10,11 @@
                     </div>
                     <div>
                         <label>Host</label>
-                        <input type="text" name="bd-host"/>
+                        <input type="text" name="bd-host" value="localhost"/>
                     </div>
                     <div>
                         <label>Login</label>
-                        <input type="text" name="bd-user"/>
+                        <input type="text" name="bd-user" value="root"/>
                     </div>
                     <div>
                         <label>Senha</label>
