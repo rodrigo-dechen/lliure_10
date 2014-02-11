@@ -104,9 +104,12 @@
 		float: right;
 		}
 		
-		#instal form .botao button{
+		#instal form .botao button,
+		#instal form .botao a{
+            padding-top: 0px;
+            padding-bottom: 0px;
 			font-size: 13px;
-			line-height: 13px;
+			line-height: 32px;
 			height: 32px;
             
             background-color: #0F77E6;
@@ -123,7 +126,8 @@
 			font-weight: bold;
 			}
 		
-		#instal form .botao button:hover{
+		#instal form .botao button:hover,
+		#instal form .botao a:hover{
 			background-color: #0E72DE;
             
             background-image: -webkit-gradient(linear, left top, left bottom, from(#0E72DE), to(#0B66C7));

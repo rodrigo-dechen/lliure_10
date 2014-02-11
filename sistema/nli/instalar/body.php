@@ -8,6 +8,7 @@
             </div>
         </fieldset>
         <span class="botao"><a href="instalar/etapa-1">Iniciar</a></span>
+        <span class="botao"><button href="instalar/etapa-1">Iniciar</button></span>
     </form>
     <div class="both"></div>
 </div>
