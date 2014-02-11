@@ -344,24 +344,35 @@ class lliure {
     private static function getDocsFooter(){
         self::getDocs(self::$DocsFooter);
     }
-    
-    private static function getDocs(array &$docs){
-        if (!empty($docs)){
-            foreach ($docs as $valor){
-                $e = explode(".", $valor);
-                $ext = strtolower(end($e));
-                if ($ext == 'css'){
-                    echo '<link type="text/css" rel="stylesheet" href="' . $valor . '" />';
-                }elseif ($ext == 'js'){
-                    echo '<script type="text/javascript" src="' . $valor . '"></script>';
-                }elseif ($ext == 'ico'){
-                    echo '<link type="image/x-icon" rel="SHORTCUT ICON" href="' . $valor . '" />';
-                }elseif (strpos($valor, '.html') !== FALSE){
-                    require $valor;
+
+    private static function getDocs(array &$docs) {
+        if (!empty($docs)) {
+            foreach ($docs as $valor) {
+                if (strpos($valor, ':') !== FALSE){
+                    $e = explode(":", $valor, 2);
+                    $ext = array_shift($e);
+                    $valor = array_shift($e);
+                }else{
+                    $e = explode(".", $valor);
+                    $ext = strtolower(end($e));
+                }
+                switch ($ext){
+                    case 'css':
+                        echo '<link type="text/css" rel="stylesheet" href="' . $valor . '" />';
+                    break;
+                    case 'js':
+                        echo '<script type="text/javascript" src="' . $valor . '"></script>';
+                    break;
+                    case 'ico':
+                        echo '<link type="image/x-icon" rel="SHORTCUT ICON" href="' . $valor . '" />';
+                    break;
+                    case 'html':
+                    case 'php':
+                        require $valor;
+                    break;
                 }
             }
         }
-        
     }
     
     public static function base($href){
