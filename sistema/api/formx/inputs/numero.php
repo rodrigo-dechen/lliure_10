@@ -22,17 +22,17 @@ class numero extends formX_implement{
         $this->min = $min;
         $this->max = $max;
         $this->step = $step;
-        lliure::addDocHead('api/formx/includes/numero/jquery.numero.js');
-        lliure::addDocHead('api/formx/includes/numero/numero.css');
+        lliure::addDocHead('api/formX/includes/numero/jquery.numero.js');
+        lliure::addDocHead('api/formX/includes/numero/numero.css');
     }
 
     public function form($dados){
         return
-            '<input class="fx_input inputNumeru_' . $this->id . '" type="hidden" name="' . $this->name . '"'.$this->getValueStandard($this->name, $dados).'>
+            '<input class="fp_input inputNumeru_' . $this->id . '" type="hidden" name="' . $this->name . '"'.$this->getValueStandard($this->name, $dados).'>
             <div class="inputNumeru">
-                <span class="fx_input inputNumeru_' . $this->id . '"></span>
-                <span class="inputNumeruUp fx_botao inputNumeruUp_' . $this->id . '"><button><span class="seta cima" style="border-color: #888;"></span></button></span>
-                <span class="inputNumeruDown fx_botao inputNumeruDown_' . $this->id . '"><button><span class="seta baixo" style="border-color: #888;"></span></button></span>
+                <span class="fp_input inputNumeru_' . $this->id . '"></span>
+                <span class="inputNumeruUp fp_botao inputNumeruUp_' . $this->id . '"><button><span class="seta cima"></span></button></span>
+                <span class="inputNumeruDown fp_botao inputNumeruDown_' . $this->id . '"><button><span class="seta baixo"></span></button></span>
             </div>    
             <script type="text/javascript">
                 $("input.inputNumeru_' . $this->id . '").numero({

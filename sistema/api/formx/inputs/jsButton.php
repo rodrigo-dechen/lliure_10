@@ -7,28 +7,34 @@
 
 class jsButton extends formX_implement{
 
-    static 
-        $ACTION = 0;
+    const
+    ACTION = 0;
     
     static private 
-        $actions = array(
-            'fx_action'
-        );
+    $actions = array(
+        'fp_action'
+    );
     
     public
-        $url, $action;
+    $action,
+    $attrs;
 
-    public function __construct($name, $action = -1){
+    public function __construct($name, $script, array $attrs = array(), $modo = -1){
         parent::__construct($name);
-        $this->url = $url;
-        $this->action = $action;
+        $this->action = $modo;
+        lliure::addDocFooter($script);
+        $this->attrs = $attrs;
     }
 
     public function form($dados){
         $action = (!array_key_exists($this->action, self::$actions)? '' : ' '.(self::$actions[$this->action]));
         
+        $attrs = '';
+        foreach($this->attrs as $chave => $valor)
+            $attrs .=  ' ' . $chave . '="' . $valor . '"';
+        
         return '
-            <span class="fx_botao' . $action . '"><div>' . $this->name . '</div></span>';
+            <span class="fp_botao' . $action . '"><div' . $attrs . '>' . $this->name . '</div></span>';
     }
 
 }

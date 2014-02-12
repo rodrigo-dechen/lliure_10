@@ -12,7 +12,7 @@ class aButton extends formX_implement{
     
     static private 
         $actions = array(
-            'fx_action'
+            'fp_action'
         );
     
     public
@@ -28,7 +28,7 @@ class aButton extends formX_implement{
         $action = (!array_key_exists($this->action, self::$actions)? '' : ' '.(self::$actions[$this->action]));
         
         return '
-            <span class="fx_botao' . $action . '"><a href="' . $this->url . '">' . $this->name . '</a></span>';
+            <span class="fp_botao' . $action . '"><a href="' . $this->url . '">' . $this->name . '</a></span>';
     }
 
 }

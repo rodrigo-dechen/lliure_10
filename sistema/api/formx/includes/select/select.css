@@ -1,20 +1,20 @@
-form.formPadrao fieldset div.fx_linha div.fx_unidade div.persoSelect{
+form.formPadrao fieldset div.fp_linha div.fp_unidade div.persoSelect{
     float: left;
     width: 100%;
     position: relative;
 }
 
-form.formPadrao fieldset div.fx_linha div.fx_unidade div.persoSelect span.fx_botao{
+form.formPadrao fieldset div.fp_linha div.fp_unidade div.persoSelect span.fp_botao{
     position: absolute;
     right: 2px;
     top: 2px;
 }
 
-form.formPadrao fieldset div.fx_linha div.fx_unidade div.persoSelect span.fx_botao button{
+form.formPadrao fieldset div.fp_linha div.fp_unidade div.persoSelect span.fp_botao button{
     padding: 8px 5px 7px;
 }
 
-form.formPadrao fieldset div.fx_linha div.fx_unidade div.persoSelect select.fx_select{
+form.formPadrao fieldset div.fp_linha div.fp_unidade div.persoSelect select.fp_select{
     position: absolute;
     left: 0px;
     top: 100%;
