@@ -1,0 +1,282 @@
+/* 
+    Document   : FormX
+    Created on : 11/05/2013, 02:33:11
+    Author     : Rodrigo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+form.formX{
+    box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    display: block;
+    overflow: visible;
+    font-size: 10px;
+}
+
+form.formX div.fx_margin_bottom{
+    float: left;
+    width: 100%;
+    margin-bottom: -30px;
+    position: relative;
+}
+
+form.formX fieldset{
+    float: left;
+    width: 100%;
+    position: relative;
+    clear: both;
+    margin-bottom: 25px;
+}
+
+form.formX fieldset.fx_fieldset_lest{
+    margin-bottom: 0px;
+}
+
+form.formX fieldset legend.fx_legend{
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; /* Firefox */
+    font-size: 1.8em;
+    margin: 0 0 25px;
+}
+
+form.formX fieldset div.fx_linha{
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    margin: 0;
+    margin-bottom: 22px;
+}
+
+form.formX fieldset div.fx_linha.fx_linha_lest{
+    margin-bottom: 0px;
+}
+
+form.formX fieldset div.fx_linha div.fx_linha_right{
+    float: right;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade{
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    padding: 0 7px;
+    z-index: 0;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade.fx_unidade_first{
+    padding-left: 0;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade.fx_unidade_last{
+    padding-right: 0;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade label.fx_label{
+    float: left;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_input,
+form.formX fieldset div.fx_linha div.fx_unidade input.fx_input,
+form.formX fieldset div.fx_linha div.fx_unidade select.fx_select,
+form.formX fieldset div.fx_linha div.fx_unidade textarea.fx_textarea{
+    float: left;
+    width: 100%;
+    -moz-box-sizing: border-box; /* Firefox */
+    box-sizing:border-box;
+    padding: 5px 6px;
+    font-size: 1.4em;
+    border-radius: 4px;
+    margin: 0px;
+    background-color: #fff;
+    border: 1px solid #000;
+    line-height: 1em;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_input,
+form.formX fieldset div.fx_linha div.fx_unidade input.fx_input,
+form.formX fieldset div.fx_linha div.fx_unidade select.fx_select{
+    height: 29px;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade select.fx_select{
+    padding: 2px 2px;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade select.fx_select optgroup,
+form.formX fieldset div.fx_linha div.fx_unidade select.fx_select option{
+    padding: 1px 1px 0 0;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_input{
+    padding-top: 7px;
+    padding-bottom: 6px;
+    white-space: nowrap;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_input[disabled="disabled"],
+form.formX fieldset div.fx_linha div.fx_unidade input.fx_input:disabled,
+form.formX fieldset div.fx_linha div.fx_unidade select.fx_select:disabled,
+form.formX fieldset div.fx_linha div.fx_unidade textarea.fx_textarea:disabled{
+    background-color: #ebebe4;
+    border-color: #545454;
+    
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao{
+    float: left;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao div,
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao button,
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao a{
+    -moz-box-sizing: border-box; /* Firefox */
+    box-sizing:border-box;
+    float: left;
+    
+    height: 29px;
+    line-height: 29px;
+    
+    border-radius: 4px;
+    padding: 0 1.2em;
+    margin: 0;
+    
+    font-size: 1.3em;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    color: #000;
+    
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    
+    cursor: pointer;
+    
+    background-color: #dbdbdb;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#dbdbdb),to(#cecece));
+    background-image: -webkit-linear-gradient(top,#dbdbdb,#cecece);
+    background-image: -moz-linear-gradient(top,#dbdbdb,#cecece);
+    background-image: -ms-linear-gradient(top,#dbdbdb,#cecece);
+    background-image: -o-linear-gradient(top,#dbdbdb,#cecece);
+    background-image: linear-gradient(top,#dbdbdb,#cecece);
+    border: 1px solid #bfbfbf;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao div:hover,
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao button:hover,
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao a:hover{
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    
+    background-color: #c1c1c1;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#dbdbdb),to(#c1c1c1));
+    background-image: -webkit-linear-gradient(top,#dbdbdb,#c1c1c1);
+    background-image: -moz-linear-gradient(top,#dbdbdb,#c1c1c1);
+    background-image: -ms-linear-gradient(top,#dbdbdb,#c1c1c1);
+    background-image: -o-linear-gradient(top,#dbdbdb,#c1c1c1);
+    background-image: linear-gradient(top,#dbdbdb,#c1c1c1);
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao div:active,
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao button:active,
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao a:active{
+    border-color: #727272;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+
+    background-color: inherit;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao.fx_action div,
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao.fx_action button,
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao.fx_action a{
+    color: #fff;
+
+    background-color: #4d90fe;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#4787ed));
+    background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+    background-image: -moz-linear-gradient(top,#4d90fe,#4787ed);
+    background-image: -ms-linear-gradient(top,#4d90fe,#4787ed);
+    background-image: -o-linear-gradient(top,#4d90fe,#4787ed);
+    background-image: linear-gradient(top,#4d90fe,#4787ed);
+    border: 1px solid #3079ed;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao.fx_action div:hover,
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao.fx_action button:hover,
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao.fx_action a:hover{
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+
+    background-color: #357ae8;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#357ae8));
+    background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+    background-image: -moz-linear-gradient(top,#4d90fe,#357ae8);
+    background-image: -ms-linear-gradient(top,#4d90fe,#357ae8);
+    background-image: -o-linear-gradient(top,#4d90fe,#357ae8);
+    background-image: linear-gradient(top,#4d90fe,#357ae8);
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao.fx_action div:active,
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao.fx_action button:active,
+form.formX fieldset div.fx_linha div.fx_unidade span.fx_botao.fx_action a:active{
+    border-color: #1951a0;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+
+    background-color: inherit;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/************************************       SETA    */
+span.seta{
+    width: 0 !important;
+    height: 0 !important;
+    border-style: solid !important;
+    display: block !important;
+    border-color: #fff;
+    border-width: 4px;
+    }
+
+    span.seta.cima,
+    span.seta.baixo{
+        border-right-color: transparent !important;
+        border-left-color: transparent !important;
+        }
+
+    span.seta.esquerda,
+    span.seta.dereita{
+        border-bottom-color: transparent !important;
+        border-top-color: transparent !important;
+        }
+
+    span.seta.cima{
+        border-top-width: 0px !important;
+        }
+
+    span.seta.baixo{
+        border-bottom-width: 0px !important;
+        }
+
+    span.seta.esquerda{
+        border-right-width: 0px !important;
+        }
+
+    span.seta.dereita{
+        border-left-width: 0px !important;
+        }
+

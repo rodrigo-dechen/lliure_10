@@ -6,10 +6,10 @@ $('#form').validate({
         'bd-pfix' : "required"
     },
     messages:{
-        'bd-host' : "Obrigatório pasar o endereço do banco",
-        'bd-user' : "Obrigatório pasar um usuário do banco",
-        'bd-banc' : "Obrigatório pasar o nome do banco",
-        'bd-pfix' : "Obrigatório pasar um prefixo para os nomes das tabelas"
+        'bd-host' : "Obrigatório passar o endereço do banco",
+        'bd-user' : "Obrigatório passar um usuário do banco",
+        'bd-banc' : "Obrigatório passar o nome do banco",
+        'bd-pfix' : "Obrigatório passar um prefixo para os nomes das tabelas"
     },
     submitHandler: function(form){
         return false;

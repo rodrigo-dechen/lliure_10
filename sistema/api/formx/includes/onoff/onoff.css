@@ -1,0 +1,75 @@
+
+form.formX fieldset div.fx_linha div.fx_unidade div.onoff{
+    float: left;
+    width: 68px;
+    position: relative;
+    margin-right: 10px;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade div.onoff span.fx_input{
+    color: #999;
+    padding-left: 8px;
+    cursor: pointer;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade div.onoff span.fx_botao{
+    top: 2px;
+    left: 2px;
+    position: absolute;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade div.onoff span.fx_botao div{
+    height: 25px;
+    width: 32px;
+    padding: 0;
+    
+    background-color: #ffc9c9;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#ffc9c9),to(#dd7a7a));
+    background-image: -webkit-linear-gradient(top,#ffc9c9,#dd7a7a);
+    background-image: -moz-linear-gradient(top,#ffc9c9,#dd7a7a);
+    background-image: -ms-linear-gradient(top,#ffc9c9,#dd7a7a);
+    background-image: -o-linear-gradient(top,#ffc9c9,#dd7a7a);
+    background-image: linear-gradient(top,#ffc9c9,#dd7a7a);
+    border: 1px solid #ef9e9e;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade div.onoff span.fx_botao div:hover{
+    
+    background-color: #ff9393;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#ff9393),to(#e84343));
+    background-image: -webkit-linear-gradient(top,#ff9393,#e84343);
+    background-image: -moz-linear-gradient(top,#ff9393,#e84343);
+    background-image: -ms-linear-gradient(top,#ff9393,#e84343);
+    background-image: -o-linear-gradient(top,#ff9393,#e84343);
+    background-image: linear-gradient(top,#ff9393,#e84343);
+    border-color: #ef5b5b;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade div.onoff span.fx_botao.on div{
+    background-color: #c9ffd9;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#c9ffd9),to(#79e098));
+    background-image: -webkit-linear-gradient(top,#c9ffd9,#79e098);
+    background-image: -moz-linear-gradient(top,#c9ffd9,#79e098);
+    background-image: -ms-linear-gradient(top,#c9ffd9,#79e098);
+    background-image: -o-linear-gradient(top,#c9ffd9,#79e098);
+    background-image: linear-gradient(top,#c9ffd9,#79e098);
+    border: 1px solid #93eaac;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade div.onoff span.fx_botao.on div:hover{
+    
+    background-color: #96ffb4;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#96ffb4),to(#61dd86));
+    background-image: -webkit-linear-gradient(top,#96ffb4,#61dd86);
+    background-image: -moz-linear-gradient(top,#96ffb4,#61dd86);
+    background-image: -ms-linear-gradient(top,#96ffb4,#61dd86);
+    background-image: -o-linear-gradient(top,#96ffb4,#61dd86);
+    background-image: linear-gradient(top,#96ffb4,#61dd86);
+    border-color: #62e587;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade p.onoff-p{
+    margin: 20px 0 0 0;
+    line-height: 1.3em;
+    font-size: 1.3em;
+}

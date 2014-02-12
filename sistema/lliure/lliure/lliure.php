@@ -69,14 +69,26 @@ class autoLoad{
 
 }
 
-spl_autoload_register(function ($nome){
-    try {
-        require_once autoLoad::getFile($nome);
-    } catch (Exception $exc) {
-        return NULL;
-        //echo $exc->getMessage();
+
+if (function_exists('spl_autoload_register')){
+    spl_autoload_register(function ($nome){
+        try {
+            require_once autoLoad::getFile($nome);
+        } catch (Exception $exc) {
+            //echo $exc->getMessage();
+            return NULL;
+        }
+    });
+}else{
+    function __autoload($nome){
+        try {
+            require_once autoLoad::getFile($nome);
+        } catch (Exception $exc) {
+            //echo $exc->getMessage();
+            return NULL;
+        }
     }
-});
+}
 
 
 

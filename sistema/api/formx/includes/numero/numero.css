@@ -1,0 +1,31 @@
+div.inputNumeru{
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade div.inputNumeru input.inputNumeru{
+    padding-right: 23px;
+}
+
+div.inputNumeru span.inputNumeruUp,
+div.inputNumeru span.inputNumeruDown{
+    position: absolute;
+    right: 2px;
+}
+
+form.formX fieldset div.fx_linha div.fx_unidade div.inputNumeru span.inputNumeruUp button,
+form.formX fieldset div.fx_linha div.fx_unidade div.inputNumeru span.inputNumeruDown button{
+    border-radius: 3px;
+    padding: 0 4px;
+    height: 12px;
+}
+
+div.inputNumeru span.inputNumeruUp{
+    top: 2px;
+}
+
+div.inputNumeru span.inputNumeruDown{
+    bottom: 2px;
+}
+
