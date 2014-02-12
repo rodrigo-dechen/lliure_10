@@ -433,9 +433,6 @@ class db {
      * RESULTADO:<br/>
      * DELETE FROM (tabela) WHERE id="0";
      * 
-     * <b>OBS</b>.: os indices que coresponderer a alguma sortTeg no WHERE não são colocados
-     * como valorer serem upados.
-     * 
      * O <code>$where</code> é opcional e se nao pasodo o DELETE é montado de maneira a <br/>
      * todos os indices estaren no WHERE.<br/>
      * EXP.:<br/>

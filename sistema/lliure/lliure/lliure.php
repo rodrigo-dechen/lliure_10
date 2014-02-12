@@ -36,8 +36,8 @@ class autoLoad{
     
     public static function setPath($path){
 
-        $basePath = realpath(__DIR__.WS.'..'.WS.'..'.WS.$path);
-        $corte = strlen(realpath(__DIR__.WS.'..'.WS.'..')) - strlen($basePath) + 1;
+        $basePath = realpath(dirname(__FILE__).WS.'..'.WS.'..'.WS.$path);
+        $corte = strlen(realpath(dirname(__FILE__).WS.'..'.WS.'..')) - strlen($basePath) + 1;
         $path = $corte < 0? substr($basePath, $corte): NULL;
         
         if ($path !== NULL && !in_array($path, self::$path))
@@ -54,7 +54,7 @@ class autoLoad{
         $retorno = null;
         
         foreach (self::$functions as $function){
-            $arquivo = realpath(__DIR__.WS.'..'.WS.'..'.WS.$function($nome, self::$path));
+            $arquivo = realpath(dirname(__FILE__).WS.'..'.WS.'..'.WS.$function($nome, self::$path));
             if (is_file($arquivo)){
                 $retorno = $arquivo;
                 break;
@@ -208,12 +208,10 @@ class lliure {
     }
 
     private static function bdconf(){
-        if($_GET[0] !== 'instalar'){
-            if (!file_exists('etc/bdconf.php')){
-                header ('Location: ' . URLREAL . 'instalar');
-            }else{
-                require_once 'etc/bdconf.php';
-            }
+        if (file_exists('etc/bdconf.php')){
+            require_once 'etc/bdconf.php';
+        }elseif ($_GET[0] !== 'instalar'){
+            header ('Location: ' . URLREAL . 'instalar');
         }
     }
 
@@ -237,7 +235,7 @@ class lliure {
     }
 
     public static function logado() {
-        if (!isset($_SESSION['ll']['user']) && ($_GET[0] !== 'login') && self::$Modo != NLI){
+        if (!isset($_SESSION['ll']['user']) && ($_GET[0] !== 'login') && self::$Modo !== NLI){
             //$_SESSION['ll']['url'] = 
             header ('Location: ' . URLREAL . 'login');
         }
