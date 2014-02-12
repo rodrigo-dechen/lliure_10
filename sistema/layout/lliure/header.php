@@ -1,15 +1,15 @@
 <?php
 
-lliure::addDocHead('suplimentos/imagens/favicon.ico');
-lliure::addDocHead('suplimentos/css/base.css');
+lliure::addDocHead('src/imagens/favicon.ico');
+lliure::addDocHead('src/css/base.css');
 
-lliure::addDocHead('suplimentos/js/jquery.js');
+lliure::addDocHead('src/js/jquery.js');
 //lliure::addDocHead('api/tiny_mce/tiny_mce.js');
-lliure::addDocHead('suplimentos/js/jquery-ui.js');
-lliure::addDocHead('suplimentos/js/funcoes.js');
-lliure::addDocHead('suplimentos/js/jquery.jfkey.js');
-lliure::addDocHead('suplimentos/js/jquery.easing.js');
-lliure::addDocHead('suplimentos/js/jquery.jfbox.js');
+lliure::addDocHead('src/js/jquery-ui.js');
+lliure::addDocHead('src/js/funcoes.js');
+lliure::addDocHead('src/js/jquery.jfkey.js');
+lliure::addDocHead('src/js/jquery.easing.js');
+lliure::addDocHead('src/js/jquery.jfbox.js');
 
 lliure::addDocHead(lliure::getPathLayout().'/css/principal.css');
 lliure::addDocHead(lliure::getPathLayout().'/css/paginas.css');

@@ -261,7 +261,7 @@ class lliure {
     }
 
     private static function requires() {
-        require_once 'suplimentos'.WS.'php'.WS.'functions.php';
+        require_once 'src'.WS.'php'.WS.'functions.php';
     }
     
     private static function setllconf() {

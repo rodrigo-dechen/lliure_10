@@ -15,7 +15,13 @@
                         <p>Bem vindo.</p>
                     </div>
                     <div>
-                        <span class="botao"><a href="instalar/etapa-1">Iniciar</a></span>
+                        <input type="text" />
+                    </div>
+                    <div>
+                        <button type="submit">teste</button>
+                    </div>
+                    <div>
+                        <a href="instalar/etapa-1">Iniciar</a>
                     </div>
                 </fieldset>
             </form>

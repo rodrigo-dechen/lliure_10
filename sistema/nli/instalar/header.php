@@ -2,8 +2,9 @@
 
 switch (!empty($_GET[1])? $_GET[1]: NULL){
 
-    case 'etapa-1': 
-        lliure::addDocHead('suplimentos/js/jquery.validate.js');
+    case 'etapa-1':
+        
+        lliure::addDocHead('src/js/jquery.validate.js');
         lliure::addDocFooter(lliure::getPathApp(). WS. 'js'. WS. 'etapa1.js');
         
         $form = new formx('form');
@@ -15,9 +16,9 @@ switch (!empty($_GET[1])? $_GET[1]: NULL){
                 'bd-pfix' => 'll_'
             ))
             ->fieldset()
-                ->texto(null, 
-                    '<h1>Etapa 1: Banco de Dados</h1>'.
-                    '<p>Banco de dados.</p>'
+                ->texto(
+                     '<h1>Etapa 1: Banco de Dados</h1>'
+                    .'<p>Banco de dados.</p>'
                 )
                 ->input('bd-host', 'Host')
                 ->input('bd-user', 'Usuario')
@@ -25,7 +26,7 @@ switch (!empty($_GET[1])? $_GET[1]: NULL){
                 ->input('bd-banc', 'Banco de dados')
                 ->input('bd-pfix', 'Prefixo')
                 ->linha(2, linha::float_right)
-                    ->button('criar', button::ACTION)
+                    ->button('Criar', button::ACTION)
                     ->aButton('Etapa 2', 'instalar/etapa-2');
         
     break; 

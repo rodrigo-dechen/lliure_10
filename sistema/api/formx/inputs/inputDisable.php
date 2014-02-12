@@ -5,7 +5,7 @@
  * @author Rodrigo
  */
 
-class input extends formX_implement{
+class inputDisable extends formX_implement{
 
     public 
         $type;
@@ -18,7 +18,7 @@ class input extends formX_implement{
 
     public function form($dados){
         return '
-            <input class="fp_input" name="' . $this->name . '" type="' . $this->type . '" '.$this->getValueStandard($this->name, $dados).' />';
+            <input class="fp_input" name="' . $this->name . '" type="' . $this->type . '" '.$this->getValueStandard($this->name, $dados).' disabled="disabled"/>';
     }
 
 }

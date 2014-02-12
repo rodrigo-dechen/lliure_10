@@ -5,7 +5,7 @@ $bar->nome('Conta');
 $bar->addBottom()
     ->setTitulo(historico::backName())
     ->setHref(historico::backUrl())
-    ->setImg('suplimentos/icones/br_prev.png');
+    ->setImg('src/icones/br_prev.png');
 
 $user = new admin();
 

@@ -8,6 +8,8 @@
 * @Licença http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,156 +27,100 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: inherit;
 	vertical-align: baseline;
 	text-decoration: none;
-	}
+}
 
-/* HTML5 display-role reset for older browsers */
+
+/************************/
+/***    HTML5 display-role reset for older browsers  ***/
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
-	}
-		
-body {
-	line-height: 1;
-	}
-	
-ol, ul {
-	list-style: none;
-	}
+}
 
 blockquote, q {
 	quotes: none;
-	}
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
-	}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	}
-		
-		
-/**********	Reset by Jeison **********/
+}
 
 button::-moz-focus-inner {
     border:0 !important;
     padding:0 !important;
-	}
+}
 
-strong{
-	font-weight: bold;
-	}
-	
-em{
-	font-style: italic;
-	}
-	
-.both {	clear:both;
-	}
-
-/***/		
+/************************/
+/***    Base         ****/		
 html, body {
 	width:100%;
 	height:100%;
 	font-family: "DejaVu Sans", Verdana, Tahoma,  "Ubuntu","Ubuntu Beta","Bitstream Vera Sans";
-	font-size: 12px;
-	} 
+	font-size: 10px;
+} 
 	
-body{	
+body{
 	text-align:center;	
-	}
-	
-img{border: 0px;
-	}
+}
 
-img.imge{
-	width: 0;
-	height: 0;
-	display: none;
-	}
+/**************************/
+/***    Lista           ***/	
+ol, ul {
+	list-style: none;
+}
 
-img.imgl{
-	float: left;
-	padding: 10px;
-	padding-left: 0;
-	}
-
-li{	list-style-type: none;
-	}
-
-a{
-	color:#555;
+/**************************/
+/***    Links           ***/
+a, a:visited{
+	color: #555;
 	outline: none;
-	}
+}
 
 a:hover {
-	color:#000;
-	}
-	
+	color:#878787;
+}
 
-a.link{	color:#02679c;
-	}
-
-a.link:hover {
-	color: #00344F;
-	text-decoration: underline;
-	}
-	
-h1	{	
-	font-size: 2em;
-	margin-bottom: 3px;
-	color: #a90037;
+/**************************/
+/***    Titulos         ***/
+h1, h2, h3, h4, h5, h6{
+	color: #afafaf;
 	font-weight: bold;
-	}
+}
+
+h1 {font-size: 2.5em;   margin-bottom: 0.7em;}
+h2 {font-size: 2.25em;  margin-bottom: 0.6em;}
+h3 {font-size: 2em;     margin-bottom: 0.5em;}
+h4 {font-size: 1.75em;  margin-bottom: 0.4em;}
+h5 {font-size: 1.5em;   margin-bottom: 0.3em;}
+h6 {font-size: 1.25em;  margin-bottom: 0.2em;}
 	
-	div.linhaFina{
-		font-size: 11px;
-		margin: -12px 0 16px;
-		}
-		
-h2{
-	font-size: 1.3em;
-	color: #9e0000;
-	margin-bottom: 15px;
-	font-weight: bold;
-	}
-			
-h3 {
-	font-size: 1em;
-	color: #444;
-	margin-bottom: 3px;
-	}
+div.linhaFina{
+    font-size: 1.1em;
+    margin: -12px 0 16px;
+}
 
-		
-p{	margin: 0 0 8px 0;
-	line-height: 14px;
-	text-align: justify;
-	line-height: 140%;
-	}
-
-
-/* Formularios */
+/**************************/
+/***    Formularios     ***/
 fieldset{
 	border: none;
 	margin-bottom: 15px;
-	}
+}
+
+legend{
+    font-size: 1.75em;
+}
 
 label {	
 	display: block;
 	margin-bottom: 5px;
-	font-size: 1em;
-	}
-
-label span {
-	display: block;
-	float: left;
-	} 
+	font-size: 1.4em;
+    font-weight: bold;
+}
 
 input, textarea, select {
 	color: #444;
@@ -183,50 +129,126 @@ input, textarea, select {
 	font-family: "DejaVu Sans", Verdana, Tahoma,  "Ubuntu","Ubuntu Beta","Bitstream Vera Sans";
 	font-size: 1em;
 	border: 1px solid #ccc;
-	border-radius: 3px;
-	line-height: 1.5em;
-	
-	box-sizing: border-box;
-    -moz-box-sizing: border-box;
+	line-height: 1.5em;	
     -webkit-box-sizing: border-box;
-	}
+    -moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 select {	
 	width: auto;
-	}
+}
 
 textarea {	
 	height: 100px;
 	overflow: auto;
-	}
+}
 
 button {
 	background: #999;
 	color: #fff;
 	cursor: pointer;
 	border: none;
-	font-size: 0.8em;
+	font-size: 1.4em;
 	margin: 0px;
-	padding: 8px;
+	padding: 5px 14px;
 	font-family: "DejaVu Sans", Verdana, Tahoma,  "Ubuntu","Ubuntu Beta","Bitstream Vera Sans";
-	}
-	
-/**********************************************		PRE-CLASSES		*/
-.both {
-	clear:both;
-	}
+}
 
+/**************************/
+/***    Edicao          ***/
+p{	
+    display: block;
+    margin: 0 0 0.75em 0;
+	text-align: left;
+    line-height: 1.2em;
+    font-size: 1.4em;
+}
+
+strong, b{
+    font-weight: bold;
+}
+	
+i, cite, em, var, address, dfn{
+    font-style: italic;
+}
+
+tt, code, kbd, samp{
+    font-family: monospace;
+}
+
+u, ins{
+    text-decoration: underline;
+}
+	
+.both{
+    clear:both;
+}
 
 .border-box{	
 	box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-	}
-	
-span.botao {
+}
+
+small{
+    font-size: smaller;
+}
+
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+    
+/**************************/
+/***    Tabelas         ***/
+table{
+	width: 100%;
+    display: table;
+	border-collapse: collapse;
+	border-spacing: 0;
+    border-color: #555;
+    border-style: solid;
+}
+
+caption {
+    display: table-caption;
+    text-align: center;
+}
+    
+tbody, thead, tfoot{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+th, td{
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+th{
+    font-weight: bold;
+}
+
+/**********************************************		PRE-CLASSES		*/
+
+/*
+span.botao{
 	float: left;
 	height: 32px;
-	}	
+}	
 	
 	span.botao button,
 	span.botao a{
@@ -300,4 +322,4 @@ div.mensagem{
 		font-weight: bold;
 		color: #3573A6;
 		}
-	
+*/
