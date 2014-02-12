@@ -18,7 +18,7 @@ class input extends formX_implement{
 
     public function form($dados){
         return '
-            <input class="fp_input" name="' . $this->name . '" type="' . $this->type . '" '.$this->getValueStandard($this->name, $dados).' />';
+            <input class="fx_input" name="' . $this->name . '" type="' . $this->type . '" '.$this->getValueStandard($this->name, $dados).' />';
     }
 
 }

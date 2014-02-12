@@ -8,12 +8,12 @@
 class button extends formX_implement{
     
     const 
-    ACTION = 0;
+        ACTION = 0;
     
     static private 
-    $actions = array(
-        'fp_action'
-    );
+        $actions = array(
+            'fx_action'
+        );
             
     public
         $type, $action;
@@ -28,7 +28,7 @@ class button extends formX_implement{
         $action = (!array_key_exists($this->action, self::$actions)? '' : ' '.(self::$actions[$this->action]));
         
         return '
-            <span class="fp_botao' . $action . '"><button type="' . $this->type . '">' . $this->name . '</button></span>';
+            <span class="fx_botao' . $action . '"><button type="' . $this->type . '">' . $this->name . '</button></span>';
     }
 
 }

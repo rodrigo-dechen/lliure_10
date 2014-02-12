@@ -1,10 +1,5 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of texto
  *
@@ -13,13 +8,12 @@
 class texto extends formX_implement{
     
     private 
-    $texto;
+        $texto;
 
-
-    public function __construct($label = NULL, $texto) {
+    public function __construct($texto, $label = NULL) {
         parent::__construct('', $label);
         $this->texto = $texto;
-        lliure::addDocHead('api'.DS.'formX'.DS.'includes'.DS.'texto'.DS.'css.css');
+        lliure::addDocHead('api'.WS.'formx'.WS.'includes'.WS.'texto'.WS.'texto.css');
     }
 
     public function form($dados) {
@@ -28,4 +22,3 @@ class texto extends formX_implement{
     
 }
 
-?>

@@ -4,7 +4,7 @@ div.inputNumeru{
     position: relative;
 }
 
-form.formPadrao fieldset div.fp_linha div.fp_unidade div.inputNumeru input.inputNumeru{
+form.formX fieldset div.fx_linha div.fx_unidade div.inputNumeru input.inputNumeru{
     padding-right: 23px;
 }
 
@@ -12,13 +12,13 @@ div.inputNumeru span.inputNumeruUp,
 div.inputNumeru span.inputNumeruDown{
     position: absolute;
     right: 2px;
-    height: 10px;
 }
 
-form.formPadrao fieldset div.fp_linha div.fp_unidade div.inputNumeru span.inputNumeruUp button,
-form.formPadrao fieldset div.fp_linha div.fp_unidade div.inputNumeru span.inputNumeruDown button{
+form.formX fieldset div.fx_linha div.fx_unidade div.inputNumeru span.inputNumeruUp button,
+form.formX fieldset div.fx_linha div.fx_unidade div.inputNumeru span.inputNumeruDown button{
     border-radius: 3px;
-    padding: 3px 5px;
+    padding: 0 4px;
+    height: 12px;
 }
 
 div.inputNumeru span.inputNumeruUp{
@@ -26,6 +26,6 @@ div.inputNumeru span.inputNumeruUp{
 }
 
 div.inputNumeru span.inputNumeruDown{
-    bottom: 4px;
+    bottom: 2px;
 }
 

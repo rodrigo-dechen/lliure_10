@@ -23,7 +23,7 @@ class nameForFile extends formX_implement{
     public function form($dados){
         return '
             <input class="nameForFile_' . $this->meuId . '" name="' . $this->name . '" type="hidden" '.$this->getValueStandard($this->name, $dados).'/>
-            <input id="nameForFile_' . $this->meuId . '" class="fp_input" type="text" '.$this->getValueStandard($this->name, $dados).' disabled/>
+            <input id="nameForFile_' . $this->meuId . '" class="fx_input" type="text" '.$this->getValueStandard($this->name, $dados).' disabled/>
             <script>
                 $(function(){
                     nameForFile("nameForFile_' . $this->meuId . '", "input[name=' . $this->referencia . ']");

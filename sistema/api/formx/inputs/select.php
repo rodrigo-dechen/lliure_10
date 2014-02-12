@@ -13,7 +13,7 @@ class select extends formX_implement{
     public function __construct($name, $label = null, array $options = array()) {
         parent::__construct($name, $label);
         $this->options = $options;
-        //lliure::loadCss('api/formX/includes/select/select.css');
+        //lliure::addDocHead('api/formX/includes/select/select.css');
     }
     
     public function form($dados){
@@ -27,23 +27,15 @@ class select extends formX_implement{
         
         $retorno = '';
 
-        foreach ($this->options as $chave => $valor){
-            if (is_array($valor)){
-                $retorno .= '<optgroup label="' . $chave . '">';
-                
-                foreach ($valor as $key => $value)
-                    $retorno .= '<option value="' . $key . '"'.($quem == $key? ' selected': '').'>' . $value . '</option>';
-                
-                $retorno .= '</optgroup>';
-            }else
-                $retorno .= '<option value="' . $chave . '"'.($quem == $chave? ' selected': '').'>' . $valor . '</option>';
-        }
+        foreach ($this->options as $chave => $valor)
+            $retorno .= '
+                <option value="' . $chave . '"'.($quem == $chave? ' selected': '').'>' . $valor . '</option>';
 
         /*$retorno = '
             <div class="persoSelect">
-                <span class="fp_input select_'.$this->name.'">'.($this->options[$quem]).'</span>
-                <span class="fp_botao"><button class="select_'.$this->name.'"><span class="seta baixo"></button></a></span>
-                <select class="fp_select" name="' . $this->name . '" size="2">'.
+                <span class="fx_input select_'.$this->name.'">'.($this->options[$quem]).'</span>
+                <span class="fx_botao"><button class="select_'.$this->name.'"><span class="seta baixo"></button></a></span>
+                <select class="fx_select" name="' . $this->name . '" size="2">'.
                      $retorno.
                 '</select>
             </div>
@@ -76,8 +68,8 @@ class select extends formX_implement{
             </script>
         ';*/
         
-        $retorno .= 
-            '<select class="fp_select" name="' . $this->name . '">'.
+        $retorno = 
+            '<select class="fx_select" name="' . $this->name . '">'.
                  $retorno.
             '</select>'
         ;
